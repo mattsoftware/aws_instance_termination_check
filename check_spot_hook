@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Make this script executable to run when the instance termination event is received
+if [[ $IS_TERMINATING == 0 ]]; then
+    echo "$ACTION"
+    # Instance is terminating, start draining it from the load balancer
+fi
+

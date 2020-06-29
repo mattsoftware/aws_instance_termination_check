@@ -3,7 +3,7 @@ Description=Monitors the instance for spot termination events
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/check_spot.sh
+ExecStart=/usr/bin/check_spot
 WorkingDirectory=/tmp
 Restart=always
 
