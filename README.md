@@ -8,7 +8,10 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html. As 
 document the poll rate in this script is set for every 5 seconds.
 
 # Usage
-Run the script with a directory to run the scripts in when the instance gets a termination event
+Run the script with a directory to run the scripts in when the instance gets a termination event.
+The directory can also be provided by the RUN_D environment variable.  When the script start the
+/etc/check_spot file, if it exists, is read to get any environment variables to initialise the
+environment. The RUN_D variable can also be provided here.
 
 Each script will be run with the event as its STDIN. Also the event is available in the $ACTION
 environment variable

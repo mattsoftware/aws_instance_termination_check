@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitors the instance for spot termination events
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/check_spot.sh
+WorkingDirectory=/tmp
+Restart=always
+

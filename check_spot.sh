@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-#set -e
 
 ERR_NOT_A_DIRECTORY=2
+
+[[ -f /etc/check_spot ]] && source /etc/check_spot
 
 for x in "$@"; do
     case $x in
